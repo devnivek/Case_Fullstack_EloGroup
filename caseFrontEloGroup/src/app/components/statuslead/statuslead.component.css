@@ -1,0 +1,56 @@
+.bg-elo{
+    background: #272727;
+}
+
+.form-control{
+    border-radius: 0px;
+    width: 70%;
+    border: 6px solid #1822dc;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+
+.title1, .title2, .title3{
+    padding: 10px 10px;
+    min-height: 40px;
+    display: block;
+    max-width: 500px;
+}
+
+.title1{
+    background-color: orange;
+}
+
+.title2{
+    background-color: green;
+}
+
+.title3{
+    background-color: #1822dc;
+}
+
+.leads-list {
+    width: 500px;
+    max-width: 100%;
+    border: solid 1px #ccc;
+    min-height: 60px;
+    display: block;
+    background: white;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  
+.lead-box {
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: white;
+    font-size: 14px;
+}
+  

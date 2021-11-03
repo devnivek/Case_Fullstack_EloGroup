@@ -1,0 +1,37 @@
+<div class="container bg-elo">
+
+    <div class="row mt-5 align-items-center">
+        <div class="col-md-5">
+            <img class="mx-auto d-block" src="https://elogroup.com.br/wp-content/uploads/2021/08/Logo-1.svg" width="100%">
+        </div>
+        <div class="col-md-7">
+            <h2 class="text-white text-center">Painel de Leads</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <input type="text" [(ngModel)]="novolead" (keyup.enter)="addLead()" class="form-control text-center text-white bg-elo" placeholder="+ Insira um novo lead">
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-lg-4 mt-1">
+            <h4 class="text-white text-center title1 mt-1">Cliente em Potencial</h4>
+            <div cdkDropList class="leads-list" id="list-potenciais" [cdkDropListData]="potenciais" [cdkDropListConnectedTo]="['list-confimados']" (cdkDropListDropped)="drop($event)">
+                <div class="lead-box" *ngFor="let item of potenciais" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <h4 class="text-white text-center title2">Dados Confirmados</h4>
+            <div cdkDropList class="leads-list" id="list-confimados" [cdkDropListData]="confirmados" [cdkDropListConnectedTo]="['list-agendados']" (cdkDropListDropped)="drop($event)">
+                <div class="lead-box" *ngFor="let item of confirmados" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2 mb-5">
+            <h4 class="text-white text-center title3">Reunião Agendada</h4>
+            <div cdkDropList class="leads-list" id="list-agendados" [cdkDropListData]="agendados" (cdkDropListDropped)="drop($event)">
+                <div class="lead-box" *ngFor="let item of agendados" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
