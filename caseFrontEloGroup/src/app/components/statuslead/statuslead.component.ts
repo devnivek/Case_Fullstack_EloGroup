@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { environment } from 'src/environments/environment.prod';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-statuslead',
@@ -10,14 +11,12 @@ import { environment } from 'src/environments/environment.prod';
 export class StatusleadComponent implements OnInit {
 
   potenciais: string[] = environment.potenciais;
-  confirmados: string[] = [];
-  agendados: string[] = [];
+  confirmados: string[] = environment.confirmados;
+  agendados: string[] = environment.agendados;
 
-  novolead: string = '';
+  constructor(private router: Router) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void{
   }
   
   drop(event: CdkDragDrop<string[]>) {
@@ -31,15 +30,13 @@ export class StatusleadComponent implements OnInit {
     }
   }
 
-  addLead(){
-
-    if(this.novolead === ''){
-      return;
-    }
-
-    environment.potenciais.push(this.novolead);
-    this.novolead = '';
+  novoLead(){
+    environment.confirmados = []
+    Array.prototype.push.apply(environment.confirmados, this.confirmados);
+    environment.agendados = []
+    Array.prototype.push.apply(environment.agendados, this.agendados);
     
+    this.router.navigate(['/novoLead'])
   }
 
   

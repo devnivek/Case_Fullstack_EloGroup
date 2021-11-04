@@ -5,3 +5,17 @@ background: -webkit-linear-gradient(to right, #272727, #272727, #272727);  /* Ch
 background: linear-gradient(to right, #272727, #272727, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+.elo-box{
+    background-color: #272727 ;
+    border-radius: 0px;
+    color: white;
+    border: 6px solid #1822dc;
+}
+
+.alerta{
+    color: red;
+    margin-bottom: 10px;
+}
+
+
