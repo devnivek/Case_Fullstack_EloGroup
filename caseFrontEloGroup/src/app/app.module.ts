@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './views/login/login.component';
 import { HomeComponent } from './views/home/home.component';
 import { StatusleadComponent } from './components/statuslead/statuslead.component';
+import { NewLeadComponent } from './components/new-lead/new-lead.component';
+import { NovoleadComponent } from './views/novolead/novolead.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    StatusleadComponent
+    StatusleadComponent,
+    NewLeadComponent,
+    NovoleadComponent
   ],
   imports: [
     BrowserModule,

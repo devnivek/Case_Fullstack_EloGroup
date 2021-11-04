@@ -1,16 +1,8 @@
 <div class="container bg-elo">
 
-    <div class="row mt-5 align-items-center">
-        <div class="col-md-5">
-            <img class="mx-auto d-block" src="https://elogroup.com.br/wp-content/uploads/2021/08/Logo-1.svg" width="100%">
-        </div>
-        <div class="col-md-7">
-            <h2 class="text-white text-center">Painel de Leads</h2>
-        </div>
-    </div>
-
-    <div class="row justify-content-center mt-5">
-        <input type="text" [(ngModel)]="novolead" (keyup.enter)="addLead()" class="form-control text-center text-white bg-elo" placeholder="+ Insira um novo lead">
+    <div class="col-md-12 mt-5">
+            <button class="btn btn-elo btn-primary w-100" (click)="novoLead()" type="submit"><i class="fa fa-plus"
+                aria-hidden="true"></i> Novo Lead</button>
     </div>
     
     <div class="row mt-5">

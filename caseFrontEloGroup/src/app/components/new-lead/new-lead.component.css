@@ -1,0 +1,9 @@
+.form-control, .btn {
+    border-radius: 0px;
+    height: 50px;
+}
+
+.list-group-item {
+    background-color: #272727;
+    border: none;
+}

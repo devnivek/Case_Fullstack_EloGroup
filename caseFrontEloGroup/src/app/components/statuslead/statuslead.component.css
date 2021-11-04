@@ -2,14 +2,6 @@
     background: #272727;
 }
 
-.form-control{
-    border-radius: 0px;
-    width: 70%;
-    border: 6px solid #1822dc;
-    padding: 20px 10px;
-    font-size: 18px;
-}
-
 .title1, .title2, .title3{
     padding: 10px 10px;
     min-height: 40px;
@@ -17,16 +9,28 @@
     max-width: 500px;
 }
 
+.btn-elo{
+    border-radius: 0px;
+    max-width: 400px;
+    background-color: #1822dc;
+    border: 6px solid #1822dc;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+
 .title1{
     background-color: orange;
+    border-bottom: 4px solid orange;
 }
 
 .title2{
     background-color: green;
+    border-bottom: 4px solid green;
 }
 
 .title3{
     background-color: #1822dc;
+    border-bottom: 4px solid #1822dc;
 }
 
 .leads-list {
